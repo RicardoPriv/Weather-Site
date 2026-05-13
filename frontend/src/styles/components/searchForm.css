@@ -1,0 +1,134 @@
+#search-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#search-container #text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#search-container #text-container #title {
+    margin-bottom: 0.5rem;
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    color: white;
+}
+
+#search-container #text-container #subtitle {
+    margin-bottom: 2rem;
+    font-weight: 400;
+    color: rgb(219, 234, 254);
+}
+
+#search-container #search-form #input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.75rem 1rem 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid rgb(255 255 255 / 0.3);
+    background-color: rgb(255 255 255 / 0.2);
+    
+    &::placeholder { color: rgb(219 234, 254); }
+    &:focus { 
+      border-color: white;
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+    }
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+}
+
+#search-container #search-form #submit-button {
+  margin-top: 0.75rem;
+  width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  font-weight: 600;
+  padding: 0.75rem 0.75rem;
+  border-radius: 0.5rem;
+
+  background-color: white;
+  color: rgb(37 99 235);
+
+  &:hover { background-color: rgb(239 246 255); }
+  &:disabled { 
+    opacity: 0.5; 
+    cursor: not-allowed;
+  }
+
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+/*
+Search Icon:
+
+absolute
+  position: absolute;
+
+left-4
+  left: 1rem; /* 16px 
+
+top-1/2
+  top: 50%;
+
+-translate-y-1/2
+  transform: translateY(-50%);
+
+text-blue-100
+  color: rgb(219 234 254);
+
+w-5
+  width: 1.25rem; /* 20px 
+
+h-5
+  height: 1.25rem; /* 20px 
+Submit Button:
+
+mt-3
+  margin-top: 0.75rem; /* 12px 
+
+w-full
+  width: 100%;
+
+bg-white
+  background-color: rgb(255 255 255);
+
+text-blue-600
+  color: rgb(37 99 235);
+
+font-semibold
+  font-weight: 600;
+
+py-3
+  padding-top: 0.75rem; /* 12px 
+  padding-bottom: 0.75rem; /* 12px 
+
+rounded-lg
+  border-radius: 0.5rem; /* 8px 
+
+hover:bg-blue-50
+  &:hover {
+    background-color: rgb(239 246 255);
+  }
+
+transition-colors
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+
+disabled:opacity-50
+  &:disabled {
+    opacity: 0.5;
+  }
+
+disabled:cursor-not-allowed
+  &:disabled {
+    cursor: not-allowed;
+  }
+*/

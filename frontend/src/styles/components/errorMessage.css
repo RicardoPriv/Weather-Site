@@ -1,0 +1,35 @@
+#error-container {
+    margin-top: 1rem;
+
+    background-color: rgb(255 255 255 / 0.2);
+    backdrop-filter: blur(12px);
+    border-radius: 1rem;
+
+    padding: 1.25rem 1.5rem;
+    color: rgb(255 255 255);
+    border: 2px solid rgb(255 255 255 / 0.15);
+
+    /* center text like weather card */
+    text-align: center;
+}
+
+#error-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: rgb(219 234 254);
+    text-transform: none;
+}
+
+#error-subtitle {
+    margin-top: 0.5rem;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: rgb(198, 201, 204);
+}
+
+/* Reuse same hidden convention as other components */
+.hidden {
+    display: none;
+}

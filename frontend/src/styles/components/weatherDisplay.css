@@ -1,0 +1,204 @@
+#weather-container {
+    margin-top: 2rem;
+    background-color: rgb(255 255 255 / 0.2);
+    backdrop-filter: blur(12px);
+    border-radius: 1rem;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    color: rgb(255 255 255);
+}
+
+#weather-container #header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1 1 0%;
+
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    color: rgb(219 234 254);
+    text-transform: capitalize;
+}
+
+#weather-container #header #location-name {
+    margin: 1.5rem 0 0 0;
+}
+
+#weather-container #header #weather-description {
+    margin: 0 0 1.5rem 0;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+    color: rgb(198, 201, 204);
+}
+
+#weather-container #header #options {
+    margin: 1.5rem 0 0 0;
+}
+
+#weather-container #header #options button {
+    align-items: center;
+    gap: 0.25rem;   
+    padding: 0.5rem 0.75rem;
+
+    background-color: rgb(255 255 255 / 0.2);
+    border: 2px solid white;
+    color: white;
+    border-radius: 0.5rem;
+
+    &:hover { background-color: rgb(255 255 255 / 0.3); }
+
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.hidden {
+    display: none;
+}
+
+#weather-container #temperature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0 0 1.25rem 0;
+}
+
+#weather-container #temperature h1 {
+    margin: 0;
+    font-size: 3.25rem;
+    line-height: 1;
+    font-weight: 700;
+    color: rgb(219 234 254);
+    text-align: center;
+}
+
+#weather-container #temperature h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+    color: rgb(198, 201, 204);
+    text-align: center;
+}
+
+#weather-container hr {
+    border: none;
+    border-top: 1px solid rgb(255 255 255 / 0.2);
+    margin: 0;
+}
+
+#weather-container #footer {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    padding: 1.25rem 0 1.5rem 0;
+}
+
+#weather-container #footer > div {
+    text-align: center;
+}
+
+#weather-container #footer p:first-child {
+    margin: 0;
+    font-weight: 600;
+    color: rgb(219 234 254);
+}
+
+#weather-container #footer p:last-child {
+    margin: 0.25rem 0 0 0;
+    font-weight: 400;
+    color: rgb(198, 201, 204);
+}
+
+@media (max-width: 640px) {
+    #weather-container {
+        padding: 0 1rem 0 1rem;
+    }
+
+    #weather-container #footer {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+}
+
+#weather-container #forecast {
+    margin-top: 1rem;
+    background-color: transparent;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    color: rgb(255 255 255);
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+}
+
+#weather-container #forecast .forecast-day {
+    background-color: rgb(255 255 255 / 0.1);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    text-align: center;
+
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+#weather-container #forecast .forecast-day:hover {
+    background-color: rgb(255 255 255 / 0.2);
+}
+
+#weather-container #forecast .forecast-day .day-name {
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-bottom: 0.25rem;
+    color: rgb(219 234 254);
+}
+
+#weather-container #forecast .forecast-day .day-date {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: rgb(219 234 254);
+    margin-bottom: 0.5rem;
+}
+
+#weather-container #forecast .forecast-day .day-temp {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: rgb(219 234 254);
+}
+
+#weather-container #forecast .forecast-day .day-conditions {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    color: rgb(198, 201, 204);
+}
+
+@media (min-width: 640px) {
+    #weather-container #forecast {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 768px) {
+    #weather-container #forecast {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    #weather-container #forecast {
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+    }
+}
+
+
+#weather-container #header #heading {
+  margin: 1.5rem 0 0 0;
+}
